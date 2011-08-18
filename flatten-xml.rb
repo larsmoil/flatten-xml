@@ -70,7 +70,8 @@ end
 post '/parse' do
   "Your XML translated to properties file format:<br />
   <pre>
-#{FlattenXml.process(params[:xml])}
+#{FlattenXml.process(params[:xml]).lines.reject { |l| l.blank? }.join('')}
   </pre>
-  Nifty, huh?"
+  Nifty, huh?
+  "
 end
