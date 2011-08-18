@@ -74,35 +74,3 @@ post '/parse' do
   </pre>
   Nifty, huh?"
 end
-
-# if __FILE__ == $0
-# 
-#   options = {}
-# 
-#   ARGV << "-h" if ARGV.empty?
-# 
-#   optparse = OptionParser.new do |opts|
-#     opts.banner = "Usage: #{$0} [options] file1 [file2] ..."
-# 
-#     opts.on('-d', '--debug', 'Display debug information') do
-#       options[:debug] = true
-#     end
-#     opts.on('-h', '--help', 'Display this screen') do
-#       puts opts
-#       exit
-#     end
-#   end
-# 
-#   optparse.parse!
-# 
-#   logger = Logger.new(STDERR)
-#   logger.level = Logger::INFO
-#   logger.level = Logger::DEBUG if options[:debug]
-#   logger.level = Logger::TRACE if options[:trace]
-# 
-#   ARGV.each do |filename|
-#     FlattenXml.logger=logger
-#     logger.info "parsing file '#{filename}'"
-#     puts FlattenXml.process(File.open(filename))
-#   end
-# end
