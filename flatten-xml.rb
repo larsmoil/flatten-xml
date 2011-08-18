@@ -29,7 +29,7 @@ class FlattenXml
       element.elements.map do |child|
         # Print child nodes recursively
         linearize(child, "#{path}.#{child.name}")
-      end.join("\n")
+      end.compact.join("\n")
     end
 
     # Print attributes here in the future
@@ -70,7 +70,7 @@ end
 post '/parse' do
   "Your XML translated to properties file format:<br />
   <pre>
-#{FlattenXml.process(params[:xml]).lines.reject { |l| l.blank? }.join('')}
+#{FlattenXml.process(params[:xml])}
   </pre>
   Nifty, huh?
   "
