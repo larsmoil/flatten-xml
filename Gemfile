@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
 gem 'sinatra'
-gem 'shotgun', :group => :development
 gem 'heroku'
+gem 'shotgun', :group => :development
+gem 'rspec', :group => :test
