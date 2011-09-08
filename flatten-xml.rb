@@ -72,6 +72,6 @@ post '/parse' do
   <pre>
 #{FlattenXml.process(params[:xml])}
   </pre>
-  Nifty, huh?
+  <b>Nifty, huh<b>?
   "
 end
