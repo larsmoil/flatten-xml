@@ -68,7 +68,7 @@ get '/' do
 end
 
 post '/parse' do
-  "Your XML translated to properties file format:<br />
+  "<h1>Your XML translated to properties file format:</h1><br />
   <pre>
 #{FlattenXml.process(params[:xml])}
   </pre>
